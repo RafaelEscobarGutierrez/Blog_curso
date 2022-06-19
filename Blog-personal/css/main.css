@@ -1,0 +1,227 @@
+/* ****************************************************************************************************** */
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,300;1,700&family=Raleway:ital,wght@0,100;0,700;1,400;1,700&family=Yanone+Kaffeesatz:wght@200;700&display=swap');
+/* ****************************************************************************************************** */
+
+/* ****************************************************************************************************** */
+/* COLORES */
+.color1 {color: #412c49;}
+.color2 {color: #643f68;}
+.color3 {color: #995c8e;}
+.color4 {color: #e685c4;}
+.color5 {color: #f8afed;}
+/* ****************************************************************************************************** */
+
+/* ****************************************************************************************************** */
+/* ESTRUCTURAS GENERALES */
+
+
+/* Configuracion GENERAL basica para todo el documento */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Para el BODY */
+body{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Configuracion de la caja body */
+.content-body{
+  /* Todos estos paramtreo permiten que la imagen de fondo del main, abarque todo */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* ****************************************************************************************************** */
+
+/* ****************************************************************************************************** */
+/* HEADER GENERAL */
+.header{
+  width: 100%;
+  height: 140px;
+  
+  /* Nos permite crear una disposicion de filas y columnas para nuestro elemento en cuestion */
+  display: grid;
+  /* Para generar filas */
+  grid-template-rows: 1fr 1fr;
+  /* Para generar columnas */
+  /* grid-template-columns: 1fr 1fr; */
+}
+/* ****************************************************************************************************** */
+
+/* ****************************************************************************************************** */
+/* HEADER-SUBCAJA-REDES_SOCIALES */
+
+/* CAJA GENERAL DE REDES SOCIALES */
+.caja-redes-iconos{
+  background-color: #e685c4;
+  width: 100%;
+  height: 50px;
+  display: grid;
+  
+}
+
+/* CAJA PARTICULAR DE REDES SOCIALES */
+.redes-iconos{
+  /* Establecemos tamaños acorde */
+  width: 180px;
+  height: auto;
+  /* Establecemos la propiedad "DISPLAY: FLEX" --> Para el manejo mas
+  eficiente de los elementos de esta parte del menu, en este caso los
+  iconos de las redes sociales*/
+  display: flex;
+  /* Alineamos los iconos de forma horizontal, en el centro */
+  align-items: center;
+  /* Insertamos un espacio entre los iconos */
+  justify-content: space-between;
+  /* Alineamos del lado derecho los iconos */
+  justify-self: end;
+  /* Damos un marguen considerable para que lo queden muy juntos los iconos, al costado del sitio */
+  margin-right: 30px;
+}
+
+/* Etiquetas de enlace */
+.redes-iconos a{
+  /* Le damos un color a nuestros iconos, color el cual permanecera */
+  color: black;
+  /* Le damos un tamaño a nuestros iconos */
+  font-size: 29px;
+  height: 29px;
+}
+
+/* Damos un efecto hover a los iconos */
+.redes-iconos a:hover{
+  color: white;
+}
+/* ****************************************************************************************************** */
+
+/* ****************************************************************************************************** */
+/* HEADER-SUBCAJE-LOGO_&_SOBRE_MI */
+
+/* Contenedor general del logo y "sobre mi" */
+.navegacion{
+  /* Para manejar al logo en una columna y al "sobre mi" en otra */
+  display: grid;
+  /* Agregamos dichas dos columnas */
+  grid-template-columns: 1fr 1fr;
+  /* Le damos un alto a esta seccion del header, en base a la altura que resta */
+  height: 90px;
+  background-color: #412c49;
+}
+
+/* Contenedor particular del logo */
+.nav-logo{
+  /* Damos un margen de 30px al logo, con respecto a la izquierda */
+  margin-left: 60px;
+  /* Establecemos la propiedad "DISPLAY: FLEX" */
+  display: flex;
+  /* Alineamos el logo al centro de esta seccion del header */
+  align-items: center;
+}
+
+/* Configuracion de la imagen del logo */
+.nav-logo a img{
+  width: 70px;
+  height: 70px;
+}
+
+/* Contenedor particular del "Sobre mi" */
+.nav-sobre_mi{
+  /* Establecemos la propiedad display flex */
+  display: flex;
+  /* Alineamos el logo al centro de esta seccion del header */
+  align-items: center;
+  /* Mandamos este contenedor, al final de la columna que corresponde */
+  justify-self: end;
+  /* Damos un margue de 30px al "Sobre mi, con respecto a la derecha" */
+  margin-right: 60px;
+}
+
+/* Configuracion de laa etiqueta de enlace para el "Sobre mi" */
+.nav-sobre_mi a{
+  /* Quitamos el subrayado del "sobre mi" */
+  text-decoration: none;
+  /* Ponemos el texto del "sobre mi", de color negro */
+  color: black;
+  /* Le damos un nuevo tipo de subrayado a nuestro texto en "Sobre mi" */
+  border-bottom: 2px solid white;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+/* ****************************************************************************************************** */
+
+/* ****************************************************************************************************** */
+/* MAIN */
+
+/* Congiguracion del contenedor main */
+.home{
+  /* Disposicion de regilla */
+  display: grid;
+  /* Establecemos tres columnas, la de en medio de mayor tamaño */
+  grid-template-columns: 1fr 4fr 1fr;
+  /* Damos un alto del 100% */
+  height: 100%;
+
+  /* Configuracion para la imagen de fondo */
+  /* Se establece la imagen de fondo */
+   background-image: url('/IMG/fondo_inicial.jpg');
+   /* Se le da una posicion */
+   background-position: center;
+   /* Se establece como irrepetile */
+   background-repeat: no-repeat;
+   /* Se le da un tamaño */
+   background-size: cover;
+
+}
+
+/* Configuracion del contenedor particula del main */
+.contenedor{
+    /* Una disposicion grid */
+    display: grid;
+    /* Se ubica el contenedor en la columna #2 de la regilla de la disposicion del main */
+    grid-column: 2;
+    /* Se alinean todo al centro */
+    justify-items: center;
+    /* Se le da un alto */
+    height: 300px;
+    /* Se le da un espaciado con respecto al techo */
+    margin-top: 80px;
+}
+
+/* Configuracion del texto */
+.texto-inicial{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: white;
+    text-shadow: 2px 3px 2px black;
+}
+
+.enlace-blogs{
+  background-color: #412c49;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.contenedor a:hover{
+  background-color: #995c8e;
+}
